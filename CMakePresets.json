@@ -1,0 +1,50 @@
+{
+	"version": 3,
+	"configurePresets": [
+		{
+			"name": "default",
+			"binaryDir": "${sourceDir}/build",
+			"generator": "Ninja",
+			"cacheVariables": {
+				"CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+				"CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+			}
+		},
+		{
+            "name": "gcc-debug",
+            "inherits": "default",
+            "binaryDir": "${sourceDir}/build/gcc-Debug",
+            "cacheVariables": {
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+		},
+		{
+            "name": "gcc-release",
+            "inherits": "default",
+            "binaryDir": "${sourceDir}/build/gcc-Release",
+            "cacheVariables": {
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++",
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+		},
+		{
+            "name": "clang-debug",
+            "inherits": "default",
+            "binaryDir": "${sourceDir}/build/clang-Debug",
+            "cacheVariables": {
+                "CMAKE_CXX_COMPILER": "/usr/bin/clang++",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+		},
+		{
+            "name": "clang-release",
+            "inherits": "default",
+            "binaryDir": "${sourceDir}/build/clang-Release",
+            "cacheVariables": {
+                "CMAKE_CXX_COMPILER": "/usr/bin/clang++",
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+		}
+	]
+}
