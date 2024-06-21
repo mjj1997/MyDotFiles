@@ -1,0 +1,14 @@
+Checks: '-*,
+        clang-analyzer-*,
+        cppcoreguidelines-*,
+        -cppcoreguidelines-avoid-magic-numbers,
+        modernize-use-*,
+        -modernize-use-trailing-return-type,
+        bugprone-*,
+        readability-identifier-naming,
+        readability-avoid-const-params-in-decls,
+        readability-redundant-control-flow,
+        readability-simplify-boolean-expr,
+        readability-isolate-declaration,
+        '
+FormatStyle: 'file'
