@@ -1,7 +1,6 @@
 Checks: '-*,
         clang-analyzer-*,
         cppcoreguidelines-*,
-        -cppcoreguidelines-avoid-magic-numbers,
         modernize-use-*,
         -modernize-use-trailing-return-type,
         bugprone-*,
